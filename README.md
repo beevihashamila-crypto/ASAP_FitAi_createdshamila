@@ -15,6 +15,30 @@
 
 💬 AI Coach Assistant – 24/7 fitness guidance and motivational support
 
+FOLDER STRUCTURE
+
+
+fitai/
+│
+├── app.py                    # Main application file
+├── requirements.txt          # Python dependencies
+├── README.md                # Project documentation
+│
+├── modules/                 # Core functionality modules
+│   ├── workout_planner.py   # Workout planning and tracking
+│   ├── nutrition_engine.py  # Nutrition planning and logging
+│   ├── health_tracker.py    # Health metrics monitoring
+│   ├── progress_analytics.py # Progress visualization
+│   ├── gamification.py      # Points, badges, and rewards
+│   └── ai_coach.py          # AI fitness assistant
+│   
+├── pages/                 
+│   └── goals.py
+│   ├── nutrition.py
+│   └── workout.py
+│
+└── data/                    # Local data storage (created at runtime)
+    └── user_data.json      # User profiles and progress data
 
 Quick Start
 Prerequisites
@@ -45,4 +69,5 @@ bash
 streamlit run app.py
 
 Open your browser and navigate to http://localhost:8501
+
 
