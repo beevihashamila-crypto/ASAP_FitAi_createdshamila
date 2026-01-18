@@ -8,14 +8,19 @@ class AICoach:
     def __init__(self):
         self.client = None
         self.initialize_ai_client()
-        self.conversation_history = []
+        st.session_state.ai_conversation
+
     
     def initialize_ai_client(self):
         """Initialize Hugging Face AI client"""
         try:
             HF_TOKEN = st.secrets.get("HF_TOKEN", "")
             if HF_TOKEN:
-                self.client = InferenceClient("meta-llama/Meta-Llama-3-8B", token=HF_TOKEN)
+                self.client = InferenceClient(
+    model="meta-llama/Meta-Llama-3-8B-Instruct",
+    token=HF_TOKEN
+)
+
                 st.session_state.ai_available = True
             else:
                 self.client = None
